@@ -1,0 +1,88 @@
+/* Configuració global: Fons blanc i neteja de marges */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    /* a. Fons blanc */
+    color: #333;
+}
+
+/* Capçalera: Flexbox per posar títol a l'esquerra i menú a la dreta */
+.capçalera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* a. Títol a la part superior esquerra */
+.titol {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* b. Menú horitzontal superior alineat a la dreta */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    /* Separació entre els enllaços del menú */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #0066cc;
+}
+
+/* Estructura del contingut principal */
+.contingut {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* c. Les imatges estan situades dins de caixes */
+.caixa-imatge {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: block;
+    transition: transform 0.2s;
+}
+
+.caixa-imatge:hover {
+    transform: translateY(-3px);
+    /* Petita animació en passar el ratolí */
+}
+
+.caixa-imatge img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Imatge principal gran */
+.seccio-principal {
+    margin-bottom: 30px;
+}
+
+.caixa-imatge.principal {
+    max-height: 450px;
+}
+
+/* Les tres imatges inferiors en una graella o fila */
+.seccio-inferior {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
